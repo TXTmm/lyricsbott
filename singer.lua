@@ -80,15 +80,15 @@ end)
 task.spawn(function()
 	while task.wait(60) do
 		if not debounce then
-			sendMessage('Hello, my name is Bob the Lyrics Bot! I was created by Director_C00lkidd (My main account)')
+			sendMessage('Hello, my name is Bob the Lyrics Bot! Type >lyics SongNameHere and i will sing the song for you!')
 			task.wait(2)
 			if not debounce then
-				sendMessage('Type >lyics SongNameHere and i will sing the song for you! You can also do >lyrics SongNameHere by AuthorsNameHere')
+				sendMessage('You can also do >lyrics SongNameHere by AuthorsNameHere')
 			end
 		end
 	end
 end)
 
-sendMessage('Hello, my name is Bob the Lyrics Bot! I was created by Director_C00lkidd (My main account)')
+sendMessage('Hello, my name is Bob the Lyrics Bot! Type >lyics SongNameHere and i will sing the song for you!')
 task.wait(2)
-sendMessage('Type >lyics SongNameHere and i will sing the song for you! You can also do >lyrics SongNameHere by AuthorsNameHere')
+sendMessage('You can also do >lyrics SongNameHere by AuthorsNameHere')
