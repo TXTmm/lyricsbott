@@ -80,15 +80,15 @@ end)
 task.spawn(function()
 	while task.wait(60) do
 		if not debounce then
-			sendMessage('Hello, my name is Bob the Lyrics Bot! Type >lyics SongNameHere and i will sing the song for you!')
+			sendMessage('Type >lyics SongNameHere and i will sing the requested song.')
 			task.wait(2)
 			if not debounce then
-				sendMessage('You can also do >lyrics SongNameHere by AuthorsNameHere')
+				sendMessage('You can also type the Author(s) of the song, Example: >lyrics SongNameHere by A͟͟͟u͟͟͟t͟͟͟h͟͟͟o͟͟͟r͟͟͟(͟s͟͟͟)͟N͟͟͟a͟͟͟m͟͟͟e͟͟͟H͟͟͟e͟͟͟r͟͟͟e͟͟͟')
 			end
 		end
 	end
 end)
 
-sendMessage('Hello, my name is Bob the Lyrics Bot! Type >lyics SongNameHere and i will sing the song for you!')
+sendMessage('Type >lyics SongNameHere and i will sing the requested song.')
 task.wait(2)
-sendMessage('You can also do >lyrics SongNameHere by AuthorsNameHere')
+sendMessage('You can also type the Author(s) of the song, Example: >lyrics SongNameHere by A͟͟͟u͟͟͟t͟͟͟h͟͟͟o͟͟͟r͟͟͟(͟s͟͟͟)͟N͟͟͟a͟͟͟m͟͟͟e͟͟͟H͟͟͟e͟͟͟r͟͟͟e͟͟͟')
