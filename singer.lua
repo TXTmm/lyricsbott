@@ -80,15 +80,15 @@ end)
 task.spawn(function()
 	while task.wait(60) do
 		if not debounce then
-			sendMessage('Type >lyics S͟o͟n͟g͟N͟a͟m͟e͟H͟e͟r͟e͟ and i will sing the requested song.')
+			sendMessage('Type >lyics SONGNAMEHERE and i will sing the requested song.')
 			task.wait(2)
 			if not debounce then
-				sendMessage('You can also type the Author(s) of the song, Example: >lyrics SongNameHere by A͟͟͟u͟͟͟t͟͟͟h͟͟͟o͟͟͟r͟͟͟(͟s͟͟͟)͟N͟͟͟a͟͟͟m͟͟͟e͟͟͟H͟͟͟e͟͟͟r͟͟͟e͟͟͟')
+				sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
 			end
 		end
 	end
 end)
 
-sendMessage('Type >lyics S͟o͟n͟g͟N͟a͟m͟e͟H͟e͟r͟e͟ and i will sing the requested song.')
+sendMessage('Type >lyics SONGNAMEHERE and i will sing the requested song.')
 task.wait(2)
-sendMessage('You can also type the Author(s) of the song, Example: >lyrics SongNameHere by A͟͟͟u͟͟͟t͟͟͟h͟͟͟o͟͟͟r͟͟͟(͟s͟͟͟)͟N͟͟͟a͟͟͟m͟͟͟e͟͟͟H͟͟͟e͟͟͟r͟͟͟e͟͟͟')
+sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
