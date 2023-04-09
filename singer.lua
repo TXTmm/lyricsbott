@@ -62,7 +62,7 @@ game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('O
 	end
 	sendMessage('Fetched lyrics')
 	task.wait(2)
-	sendMessage('Playing song requested by ' .. speakerDisplay .. '. They can stop it by saying ">stop"')
+	sendMessage('Playing song requested by ' .. speakerDisplay .. '. They can stop it by typing >stop')
 	task.wait(3)
 	for i, line in ipairs(lyricsTable) do
 		if getgenv().stopped then
