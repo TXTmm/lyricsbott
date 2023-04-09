@@ -69,7 +69,7 @@ game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('O
 			getgenv().stopped = false
 			break
 		end
-		sendMessage('🎙️ | ' .. line)
+		sendMessage('🎶 | ' .. line)
 		task.wait(5)
 	end
 	task.wait(3)
