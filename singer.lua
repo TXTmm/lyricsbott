@@ -80,7 +80,7 @@ end)
 task.spawn(function()
 	while task.wait(60) do
 		if not debounce then
-			sendMessage('Type >lyics SONGNAMEHERE and i will sing the requested song.')
+			sendMessage('Type >lyrics SONGNAMEHERE and i will sing the requested song.')
 			task.wait(2)
 			if not debounce then
 				sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
@@ -89,6 +89,6 @@ task.spawn(function()
 	end
 end)
 
-sendMessage('Type >lyics SONGNAMEHERE and i will sing the requested song.')
+sendMessage('Type >lyrics SONGNAMEHERE and i will sing the requested song.')
 task.wait(2)
 sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
