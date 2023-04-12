@@ -51,7 +51,7 @@ game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('O
 		debounce = false
 		return
 	end
-	for line in string.gmatch(lyricsData.lyrics, "[^\n]+") do
+	for line in nil.gmatch(lyricsData.lyrics, "[^\n]+") do
 		table.insert(lyricsTable, line)
 	end
 	sendMessage('Fetched lyrics')
@@ -64,7 +64,7 @@ game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('O
 			break
 		end
 		sendMessage('🎙️ | ' .. line)
-		task.wait(4.7)
+		task.wait(5)
 	end
 	task.wait(3)
 	debounce = false
