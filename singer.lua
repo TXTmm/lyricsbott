@@ -1,22 +1,16 @@
 repeat task.wait() until game:IsLoaded()
-
 if not getgenv().executedHi then
 	getgenv().executedHi = true
 else
 	return
 end
 local httprequest = (syn and syn.request) or http and http.request or http_request or (fluxus and fluxus.request) or request
-
 local songName,plr
 local debounce = false
-
 getgenv().stopped = false
-
 local function sendMessage(text)
 	game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(text, "All")
 end
-
-
 game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('OnMessageDoneFiltering').OnClientEvent:Connect(function(msgdata)
 	if plr ~= nil and (msgdata.FromSpeaker == plr or msgdata.FromSpeaker == game:GetService('Players').LocalPlayer.Name) then
 		if string.lower(msgdata.Message) == '>stop' then
@@ -62,33 +56,31 @@ game:GetService('ReplicatedStorage').DefaultChatSystemChatEvents:WaitForChild('O
 	end
 	sendMessage('Fetched lyrics')
 	task.wait(2)
-	sendMessage('Playing song requested by ' .. speakerDisplay .. '. They can stop it by typing >stop')
+	sendMessage('Playing song requested by ' .. speakerDisplay .. '. They can stop it by saying ">stop"')
 	task.wait(3)
 	for i, line in ipairs(lyricsTable) do
 		if getgenv().stopped then
 			getgenv().stopped = false
 			break
 		end
-		sendMessage('🎶 | ' .. line)
-		task.wait(5)
+		sendMessage('🎙️ | ' .. line)
+		task.wait(4.7)
 	end
 	task.wait(3)
 	debounce = false
 	sendMessage('Ended. You can request songs again.')
 end)
-
 task.spawn(function()
 	while task.wait(60) do
 		if not debounce then
-			sendMessage('Type >lyrics SONGNAMEHERE and i will sing the requested song.')
+			sendMessage('Type >lyrics SongNameHere and i will sing your requested song!')
 			task.wait(2)
 			if not debounce then
-				sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
+				sendMessage('or you can also do >lyrics SongNameHere by AuthorsNameHere')
 			end
 		end
 	end
 end)
-
-sendMessage('Type >lyrics SONGNAMEHERE and i will sing the requested song.')
+sendMessage('Type >lyrics SongNameHere and i will sing your requested song!')
 task.wait(2)
-sendMessage('Type >lyrics SONGNAMEHERE by AUTHORSNAMEHERE if you want to be more specific.')
+sendMessage('or you can also do >lyrics SongNameHere by AuthorsNameHere"')
